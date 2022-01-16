@@ -1,0 +1,18 @@
+---
+- name: Install Docker Prereqs
+  yum:
+    name: "{{ item }}"
+    state: absent
+  loop: "{{ docker_packages_prereqs }}"
+
+- name: Adding Repo Docker
+  yum_repository:
+    name: docker
+    description: repo docker
+    baseurl: https://download.docker.com/linux/centos/docker-ce.repo
+
+
+- name: Install Docker
+  yum:
+    name: "{{ item }}"
+  loop: "{{ docker_packages }}"

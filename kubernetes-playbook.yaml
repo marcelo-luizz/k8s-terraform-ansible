@@ -1,0 +1,8 @@
+
+- name: Install K8S and Docker 
+  become: yes
+  hosts: tag_name_k8s
+  roles:
+    - docker
+    - yum
+
