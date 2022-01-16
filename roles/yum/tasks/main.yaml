@@ -1,6 +1,7 @@
 ---
 
-- name: Install yum-utils
+- name: Install yum packages
   yum:
-    name: yum-utils
+    name: "{{ item }}"
     state: present
+  loop: "{{ yum_packages }}"
