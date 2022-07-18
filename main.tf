@@ -5,7 +5,7 @@ provider "aws" {
 
 resource "aws_key_pair" "k8s_key" {
   key_name = "k8s_key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCzD4tk7eUpuPv2+VxcjXnh0i9m+S8IdMP2jeqfsXV5eRf3egKXEFyBYOldFhyWrTvhP+jUhUKJ9PZ5D2Zn5XOqtCJI3oCHd65Iwfu1H5C65Px7FjdGggRDifjRI/ShIgARo71vF0t91H9oPSyUTTSUVCiX6jY1XS6C8YsCNN0XPrWu3tqMncNjWpn+vLTs5anqx0fgqKSR9BZMGC8nmkijvotE8y0a4LNYPYi/00v5pY2WcswvpRPxDNBAz+WlWZ363sIin8FvdahaW96Z/qAt7zU/YLBC29g9S1nXugpbs8GlizfKsDk15AuQA4Wa3KBhQvUNgKUTOASMLjN909Rf vagrant@localhost.localdomain"
+  public_key = ""
 }
 
 resource "aws_security_group" "k8s_security_group" {
